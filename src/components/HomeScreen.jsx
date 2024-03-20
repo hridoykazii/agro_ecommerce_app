@@ -13,7 +13,8 @@ import Zocial from "react-native-vector-icons/Zocial";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+console.log('Nav================', navigation.navigate('LoginPage'))
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -42,7 +43,7 @@ const HomeScreen = () => {
             height: 360,
             width: 380,
             shadowColor: "#000",
-            shadowOffset: {width: 0, height: 0},
+            shadowOffset: { width: 0, height: 0 },
             shadowOpacity: 0.25,
             shadowRadius: 1,
             elevation: 6,
@@ -108,8 +109,10 @@ const HomeScreen = () => {
               marginTop: 5,
               marginBottom: 10,
             }}
+            onPress={() => navigation.navigate("LoginPage")}
           >
-            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>Login Or Signup</Text>
+            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>
+              Login Or Signup</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
