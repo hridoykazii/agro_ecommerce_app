@@ -12,6 +12,7 @@ import logo from "../../assets/logo/Akkor.png";
 import Zocial from "react-native-vector-icons/Zocial";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = ({ navigation }) => {
 console.log('Nav================', navigation.navigate('LoginPage'))
