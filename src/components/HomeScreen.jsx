@@ -12,8 +12,16 @@ import logo from "../../assets/logo/Akkor.png";
 import Zocial from "react-native-vector-icons/Zocial";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    navigation.navigate('Login'); 
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -109,7 +117,7 @@ const HomeScreen = () => {
               marginBottom: 10,
             }}
           >
-            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>Login Or Signup</Text>
+            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }} onPress={handlePress}>Login Or Signup</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
