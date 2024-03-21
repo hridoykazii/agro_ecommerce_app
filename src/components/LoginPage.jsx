@@ -24,7 +24,7 @@ import {
             height: 180,
           }}
         >
-          <Image source={logo} style={{ width: 100, height: 180 }} />
+          {/* <Image source={logo} style={{ width: 100, height: 180 }} /> */}
         </View>
         <View
           style={{
