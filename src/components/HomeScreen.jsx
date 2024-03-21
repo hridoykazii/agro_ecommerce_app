@@ -12,10 +12,10 @@ import logo from "../../assets/logo/Akkor.png";
 import Zocial from "react-native-vector-icons/Zocial";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
-const HomeScreen = ({ navigation }) => {
-console.log('Nav================', navigation.navigate('LoginPage'))
+const HomeScreen = ({navigation}) => {
+  // const navigation = useNavigation();
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -26,7 +26,7 @@ console.log('Nav================', navigation.navigate('LoginPage'))
           height: 180,
         }}
       >
-        <Image source={logo} style={{ width: 100, height: 180 }} />
+        {/* <Image source={logo} style={{ width: 100, height: 180 }} /> */}
       </View>
       <View
         style={{
@@ -61,11 +61,13 @@ console.log('Nav================', navigation.navigate('LoginPage'))
               borderRadius: 10,
               justifyContent: "center",
               marginBottom: 10,
-              marginTop: 5
+              marginTop: 5,
             }}
           >
             <Zocial name="call" size={30} color="#aeaeae" />
-            <Text style={{ marginLeft: 15, color: "#575757" }}>Sign in with phone number</Text>
+            <Text style={{ marginLeft: 15, color: "#575757" }}>
+              Sign in with phone number
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -81,7 +83,9 @@ console.log('Nav================', navigation.navigate('LoginPage'))
             }}
           >
             <AntDesign name="google" size={30} color="#aeaeae" />
-            <Text style={{ marginLeft: 15, marginRight: 40, color: "#575757" }}>Sign in with google</Text>
+            <Text style={{ marginLeft: 15, marginRight: 40, color: "#575757" }}>
+              Sign in with google
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -97,9 +101,11 @@ console.log('Nav================', navigation.navigate('LoginPage'))
             }}
           >
             <Ionicons name="logo-facebook" size={30} color="#aeaeae" />
-            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>Sign in with facebook</Text>
+            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>
+              Sign in with facebook
+            </Text>
           </TouchableOpacity>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               width: 320,
               flexDirection: "row",
@@ -110,11 +116,15 @@ console.log('Nav================', navigation.navigate('LoginPage'))
               marginTop: 5,
               marginBottom: 10,
             }}
-            onPress={() => navigation.navigate("LoginPage")}
+            onPress={() => navigation.navigate('Details')}
           >
             <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>
               Login Or Signup</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <Button
+            title="LOGIN"
+            onPress={() => navigation.navigate("LoginPage")}
+          />
           <TouchableOpacity
             style={{
               width: 320,
@@ -125,7 +135,9 @@ console.log('Nav================', navigation.navigate('LoginPage'))
               justifyContent: "center",
             }}
           >
-            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }}>Forgot Your Password?</Text>
+            <Text style={{ marginLeft: 15, marginRight: 25, color: "#575757" }} onPress={()=> navigation.navigate("ForgetPass")}>
+              Forgot Your Password?
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
