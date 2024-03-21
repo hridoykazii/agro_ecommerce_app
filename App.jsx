@@ -10,6 +10,8 @@ import Rating from './src/components/Rating';
 import Category from './src/components/Category';
 import LoginPage from './src/components/LoginPage';
 import ForgetPass from './src/components/ForgetPass';
+import SignUp from './src/components/SignUp';
+import GoogleLogin from './src/components/GoggleLogin';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -57,8 +59,11 @@ const App = () => {
         initialRouteName="HomeStack"
       >
         <Stack.Screen name="HomeStack" component={TabNavigator} />
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="LoginPage" component={LoginPage} />
+        <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgetPass" component={ForgetPass} />
+        <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
       </Stack.Navigator>
     </NavigationContainer>
   );
